@@ -1,16 +1,23 @@
 {
   "name": "mtg-database-backend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
-  },
+  "version": "1.0.0",
+  "description": "## React app backend for searching MtG-cards.",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/villeverkkonen/mtg-database-backend.git"
+  },
+  "author": "Ville Verkkonen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/villeverkkonen/mtg-database-backend/issues"
+  },
+  "homepage": "https://github.com/villeverkkonen/mtg-database-backend#readme",
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }
