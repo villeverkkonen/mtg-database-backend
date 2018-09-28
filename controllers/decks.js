@@ -40,7 +40,7 @@ decksRouter.post('/', (req, res) => {
 
     let deck = new Deck({
         name: body.name,
-        imageUrls: body.imageUrls
+        cards: body.cards
     })
 
     deck
@@ -53,7 +53,7 @@ decksRouter.post('/', (req, res) => {
 const formatDeck = (deck) => {
     return {
         name: deck.name,
-        imageUrls: deck.imageUrls,
+        cards: deck.cards,
         id: deck._id
     }
   }

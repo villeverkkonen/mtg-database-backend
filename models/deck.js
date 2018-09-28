@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const Deck = mongoose.model('Deck', {
     name: String,
-    imageUrls: Array
+    cards: Array
   })
 
 module.exports = Deck
