@@ -1,0 +1,7 @@
+POST http://localhost:3001/new_deck
+content-type: application/json
+
+{
+    "name": "TestDeck",
+    "imageUrls": ["test_url_1", "test_url_2"]
+}
