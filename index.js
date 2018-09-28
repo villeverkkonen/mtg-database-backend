@@ -20,7 +20,7 @@ app.use(express.static('build'))
 app.use(morgan('tiny'))
 app.use(cors())
 app.use(middleware.logger)
-app.use('/', decksRouter)
+app.use('/api/decks', decksRouter)
 app.use(middleware.error)
 
 const PORT = process.env.PORT || 3001

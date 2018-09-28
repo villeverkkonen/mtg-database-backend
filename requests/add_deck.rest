@@ -1,4 +1,4 @@
-POST http://localhost:3001/new_deck
+POST http://localhost:3001/api/decks
 content-type: application/json
 
 {

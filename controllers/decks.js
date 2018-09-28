@@ -1,7 +1,7 @@
 const decksRouter = require('express').Router()
 const Deck = require('../models/deck')
 
-decksRouter.get('/decks', (req, res) => {
+decksRouter.get('/', (req, res) => {
     Deck
     .find({})
     .then(decks => {
@@ -9,7 +9,7 @@ decksRouter.get('/decks', (req, res) => {
     })
 })
 
-decksRouter.get('/decks/:id', (req, res) => {
+decksRouter.get('/:id', (req, res) => {
     Deck
     .findById(req.params.id)
     .then(deck => {
@@ -25,7 +25,7 @@ decksRouter.get('/decks/:id', (req, res) => {
     })
 })
 
-decksRouter.post('/new_deck', (req, res) => {
+decksRouter.post('/', (req, res) => {
     // Allow only 10 saved decks in database
     // Delete oldest one
     Deck
