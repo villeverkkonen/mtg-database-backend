@@ -25,10 +25,10 @@ decksRouter.get('/:id', (req, res) => {
     })
 })
 
-decksRouter.post('/', (req, res) => {
+decksRouter.post('/', async (req, res) => {
     // Allow only 10 saved decks in database
     // Delete oldest one
-    Deck
+    await Deck
     .find({})
     .then(decks => {
         if (decks.length >= 10) {

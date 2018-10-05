@@ -8,4 +8,5 @@
 | 10.8. | 1    | Able to run the server |
 | 31.8. | 1    | Dependencies and testing the backend with examples |
 | 28.9. | 3    | Routes and database connections so decks can be saved and viewed |
-|    =	| 6    | |
+| 5.10. | 2    | Trying to get deck saving working and deleting automatically oldest ones if more than 10 decks exist already |
+|    =	| 8    | |
