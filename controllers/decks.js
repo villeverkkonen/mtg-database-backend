@@ -31,8 +31,11 @@ decksRouter.post('/', async (req, res) => {
     await Deck
     .find({})
     .then(decks => {
-        if (decks.length >= 10) {
-            Deck.findByIdAndRemove(decks[0].id)
+        if (decks.length >= 15) {
+            decks = decks.sort((a, b) => a.created_at > b.created_at)
+            const query = {_id: decks[0]._id}
+            Deck.findOneAndDelete(query, function (err,offer){
+                if(err) { throw err; }})
         }
     })
 
@@ -40,7 +43,8 @@ decksRouter.post('/', async (req, res) => {
 
     let deck = new Deck({
         name: body.name,
-        cards: body.cards
+        cards: body.cards,
+        created_at: new Date()
     })
 
     deck
@@ -54,6 +58,7 @@ const formatDeck = (deck) => {
     return {
         name: deck.name,
         cards: deck.cards,
+        created_at: deck.created_at,
         id: deck._id
     }
   }

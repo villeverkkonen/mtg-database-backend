@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 mongoose.Promise = global.Promise
 
-app.use(bodyParser.json())
+app.use(bodyParser.json({limit: '50mb'}))
 app.use(express.static('build'))
 app.use(morgan('tiny'))
 app.use(cors())

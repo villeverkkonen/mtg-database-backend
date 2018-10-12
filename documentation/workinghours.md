@@ -9,4 +9,5 @@
 | 31.8. | 1    | Dependencies and testing the backend with examples |
 | 28.9. | 3    | Routes and database connections so decks can be saved and viewed |
 | 5.10. | 2    | Trying to get deck saving working and deleting automatically oldest ones if more than 10 decks exist already |
-|    =	| 8    | |
+| 12.10.| 1    | Saving decks with name and created_at date, and cards of course |
+|    =	| 9    | |
