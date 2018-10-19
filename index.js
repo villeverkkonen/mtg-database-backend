@@ -12,7 +12,14 @@ if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+const options = {
+    useNewUrlParser: true,
+    keepAlive: 1000,
+    connectTimeoutMS: 30000,
+    reconnectTries: 30,
+    reconnectInterval: 2000
+}
+mongoose.connect(process.env.MONGODB_URI, options)
 mongoose.Promise = global.Promise
 
 app.use(bodyParser.json({limit: '50mb'}))
