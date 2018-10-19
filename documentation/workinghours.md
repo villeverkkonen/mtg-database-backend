@@ -11,4 +11,4 @@
 | 5.10. | 2    | Trying to get deck saving working and deleting automatically oldest ones if more than 10 decks exist already |
 | 12.10.| 1    | Saving decks with name and created_at date, and cards of course |
 | 19.10.| 1    | Mongoose settings |
-|    =	| 9    | |
+|    =	| 10    | |
