@@ -1,7 +1,7 @@
 {
   "name": "mtg-database-backend",
   "version": "1.0.0",
-  "description": "## React app backend for searching MtG-cards.",
+  "description": "## React app for searching and drafting MtG-cards.",
   "main": "index.js",
   "engines": {
     "npm": "5.6.0",
@@ -28,7 +28,8 @@
     "express": "^4.16.3",
     "mongoose": "^5.2.12",
     "morgan": "^1.9.1",
-    "npm": "^6.4.1"
+    "npm": "^6.4.1",
+    "nodemon": "^1.18.4"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
