@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "## React app backend for searching MtG-cards.",
   "main": "index.js",
+  "engines": {
+    "npm": "5.6.0",
+    "node": "8.9.4"
+  },
   "scripts": {
     "start": "node index.js",
     "watch": "nodemon index.js",
