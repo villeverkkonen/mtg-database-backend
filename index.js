@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const cors = require('cors')
 const mongoose = require('mongoose')
-const Deck = require('./models/deck')
 const middleware = require('./utils/middleware')
 const decksRouter = require('./controllers/decks')
 
