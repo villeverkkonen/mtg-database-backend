@@ -1,6 +1,6 @@
 # Magic: The Gathering card database
 
-## React app backend for searching MtG-cards.
+## React app for searching MtG-cards.
 
 ### [App in Heroku](https://mtg-card-database.herokuapp.com/)
 ### [Frontend which is build in this backend](https://github.com/villeverkkonen/mtg-database-frontend)
