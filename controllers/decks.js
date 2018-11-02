@@ -1,7 +1,8 @@
 const decksRouter = require('express').Router()
 const Deck = require('../models/deck')
+const baseUrl = "/api/decks"
 
-decksRouter.get('/', (req, res) => {
+decksRouter.get(baseUrl, (req, res) => {
     Deck
     .find({})
     .then(decks => {
