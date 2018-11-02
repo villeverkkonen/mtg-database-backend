@@ -1,5 +1,5 @@
 {
-  "name": "mtg-database-backend",
+  "name": "mtg-database",
   "version": "1.0.0",
   "description": "## React app for searching and drafting MtG-cards.",
   "main": "index.js",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/villeverkkonen/mtg-database-backend/issues"
   },
-  "homepage": "https://github.com/villeverkkonen/mtg-database-backend#readme",
+  "homepage": "https://mtg-database.herokuapp.com",
   "dependencies": {
     "cors": "^2.8.4",
     "dotenv": "^6.1.0",
