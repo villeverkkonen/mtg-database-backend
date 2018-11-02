@@ -26,12 +26,12 @@ decksRouter.get('/:id', (req, res) => {
 })
 
 decksRouter.post('/', async (req, res) => {
-    // Allow only 10 saved decks in database
+    // Allow only 15 saved decks in database
     // Delete oldest one
     await Deck
     .find({})
     .then(decks => {
-        if (decks.length >= 10) {
+        if (decks.length >= 15) {
             decks = decks.sort((a, b) => a.created_at > b.created_at)
             const query = {_id: decks[0]._id}
             Deck.findOneAndDelete(query, function (err,offer){
