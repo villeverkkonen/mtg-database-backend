@@ -1,9 +1,9 @@
-# Magic: The Gathering card database
+# Magic: The Gathering draft simulator
 
-## React app for searching MtG-cards.
+## Single page react app for MtG booster draft.
 
 ### [App in Heroku](https://mtg-database.herokuapp.com/)
-### [Frontend which is build in this backend](https://github.com/villeverkkonen/mtg-database-frontend)
+### [Front-end which is build in this back-end](https://github.com/villeverkkonen/mtg-database-frontend)
 
 Cards are received from [Magic: The Gathering API](https://docs.magicthegathering.io/).
 
