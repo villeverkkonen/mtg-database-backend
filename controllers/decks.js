@@ -3,41 +3,42 @@ const Deck = require('../models/deck')
 
 decksRouter.get('/', (req, res) => {
     Deck
-    .find({})
-    .then(decks => {
+      .find({})
+      .then(decks => {
         res.json(decks.map(formatDeck))
-    })
+      })
 })
 
 decksRouter.get('/:id', (req, res) => {
     Deck
-    .findById(req.params.id)
-    .then(deck => {
-        if (deck) {
-            res.json(formatDeck(deck))
-        } else {
-            res.status(404).end()
-        }
-    })
-    .catch(error => {
-        console.log(error)
-        res.status(400).send({ error: 'malformatted id' })
-    })
+      .findById(req.params.id)
+      .then(deck => {
+          if (deck) {
+              res.json(formatDeck(deck))
+          } else {
+              res.status(404).end()
+          }
+      })
+      .catch(error => {
+          console.log(error)
+          res.status(400).send({ error: 'malformatted id' })
+      })
 })
 
 decksRouter.post('/', async (req, res) => {
     // Allow only 15 saved decks in database
     // Delete oldest one
     await Deck
-    .find({})
-    .then(decks => {
+      .find({})
+      .then(decks => {
         if (decks.length >= 15) {
-            decks = decks.sort((a, b) => a.created_at > b.created_at)
-            const query = {_id: decks[0]._id}
-            Deck.findOneAndDelete(query, function (err,offer){
-                if(err) { throw err; }})
+          decks = decks.sort((a, b) => a.created_at > b.created_at)
+          const query = {_id: decks[0]._id}
+          Deck.findOneAndDelete(query, function (err, offer){
+            if(err) { throw err; }
+          })
         }
-    })
+      })
 
     const body = req.body
 
@@ -48,10 +49,10 @@ decksRouter.post('/', async (req, res) => {
     })
 
     deck
-    .save()
-    .then(savedDeck => {
+      .save()
+      .then(savedDeck => {
         res.json(formatDeck(savedDeck))
-    })
+      })
 })
 
 const formatDeck = (deck) => {
