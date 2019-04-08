@@ -1,6 +1,6 @@
 # Magic: The Gathering booster draft simulator
 
-## Back-end + build in front-end for single page react app.
+## Node.js back-end with MongoDB + build in front-end for single page react app.
 
 ### [App in Heroku](https://mtg-database.herokuapp.com/)
 ### [Front-end which is build in this back-end](https://github.com/villeverkkonen/mtg-database-frontend)
