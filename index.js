@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI, options)
 mongoose.Promise = global.Promise
 
 app.use(bodyParser.json({ limit: '50mb' }))
-app.use(express.static('build'))
+app.use(express.static('mtg-database-frontend/build'))
 app.use(morgan('tiny'))
 app.use(cors())
 app.use(middleware.logger)
