@@ -27,7 +27,7 @@
     "dotenv": "^6.2.0",
     "event-stream": "^3.3.4",
     "express": "^4.16.4",
-    "mongoose": "^5.10.7",
+    "mongoose": "^5.13.15",
     "morgan": "^1.10.0",
     "npm": "^6.14.8"
   },
